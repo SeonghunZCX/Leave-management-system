@@ -76,7 +76,7 @@ class IndexController extends CommonController {
     public function handling(){
         $files = $_FILES['exl'];
         // exl格式，否则重新上传
-        if($files['type'] !='application/vnd.ms-excel'){
+        if($files['type'] !='application/octet-stream'){
             $this->error('不是Excel文件，请重新上传','/index.php?c=index&a=upload',5);
         }
         // 上传
